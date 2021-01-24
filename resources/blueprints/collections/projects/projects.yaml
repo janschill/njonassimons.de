@@ -4,6 +4,21 @@ sections:
     display: Main
     fields:
       -
+        handle: project_image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Project image'
+          type: assets
+          icon: assets
+          instructions: 'Das Projektbild wird in der Listenansicht als Quadrat angezeigt.'
+          listable: hidden
+          validate:
+            - required
+      -
         handle: title
         field:
           type: text
@@ -19,21 +34,6 @@ sections:
           type: text
           icon: text
           listable: hidden
-      -
-        handle: project_image
-        field:
-          mode: grid
-          container: assets
-          restrict: false
-          allow_uploads: true
-          max_files: 1
-          display: 'Project image'
-          type: assets
-          icon: assets
-          instructions: 'Das Projektbild wird in der Listenansicht als Quadrat angezeigt.'
-          listable: hidden
-          validate:
-            - required
       -
         handle: grid
         field:
@@ -103,10 +103,21 @@ sections:
           mode: table
           add_row: 'Add Row'
           reorderable: true
-          display: Grid
+          display: Media
           type: grid
           icon: grid
           listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
       -
         handle: taxonomy_terms
         field:
@@ -122,25 +133,15 @@ sections:
           type: template
           display: Template
           localizable: true
-  sidebar:
-    display: Sidebar
-    fields:
+          listable: hidden
+          hide_partials: true
       -
-        handle: slug
+        handle: date
         field:
-          type: slug
+          type: date
           required: true
-          localizable: true
           validate:
             - required
-      -
-        handle: author
-        field:
-          type: users
-          display: Author
-          default: current
-          localizable: true
-          max_items: 1
       -
         handle: parent
         field:
@@ -150,10 +151,3 @@ sections:
           max_items: 1
           listable: false
           localizable: true
-      -
-        handle: date
-        field:
-          type: date
-          required: true
-          validate:
-            - required

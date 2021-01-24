@@ -1,4 +1,6 @@
-data: {  }
+data:
+  focus: 8-81-7.7
+  alt: 'Visal steht in einer Flensburg Straße.'
 size: 1127890
 last_modified: 1611343322
 width: 1500

@@ -3,10 +3,9 @@
 
     {{ if video | is_empty }}
     <div class="grid grid--{{ image | length }}">
-        {{ image }}
-        <img class="card__image card__image--lazy" data-srcwebp="{{ url }}" data-src="{{ url }}" src="{{ url }}"
-            alt="{{ alt }}">
-        {{ /image }}
+        <!-- {{ glide:image fit="crop_focal"}} -->
+        <img class="card__image" src="{{ url }}" alt="{{ alt }}">
+        <!-- {{ /glide:image }} -->
     </div>
 
     {{ else }}
