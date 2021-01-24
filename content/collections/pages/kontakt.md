@@ -1,6 +1,5 @@
 ---
 title: Kontakt
-subtitle: kontakt
 template: home
 updated_by: b9f51dd1-707c-4753-ad84-3c5121b5e994
 updated_at: 1611352050

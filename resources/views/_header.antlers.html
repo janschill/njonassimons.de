@@ -1,14 +1,12 @@
 <header class="header">
     <div class="header__inner">
-        <aside class="header__aside">
-            <div class="hamburger">
-                <span class="hamburger__inner"></span>
-            </div>
-            <div class="logo">
-                <a href="/" class="logo__link">{{ title }}</a>
-            </div>
-        </aside>
-        <nav class="navigation navigation--header">
+        <div class="hamburger">
+            <span class="hamburger__inner"></span>
+        </div>
+        <div class="logo">
+            <a href="/" class="logo__link">{{ settings:site_name }}</a>
+        </div>
+        <nav class="navigation">
             {{ partial:_navigation }}
         </nav>
     </div>

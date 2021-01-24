@@ -11,17 +11,6 @@ sections:
           validate:
             - required
       -
-        handle: subtitle
-        field:
-          input_type: text
-          antlers: false
-          display: Subtitle
-          type: text
-          icon: text
-          listable: hidden
-          validate:
-            - required
-      -
         handle: template
         field:
           hide_partials: true

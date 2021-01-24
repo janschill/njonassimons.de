@@ -83,6 +83,15 @@ sections:
                       listable: hidden
                       validate:
                         - required
+                  -
+                    handle: playlist
+                    field:
+                      input_type: text
+                      antlers: false
+                      display: Playlist
+                      type: text
+                      icon: text
+                      listable: hidden
                 mode: table
                 max_rows: 1
                 add_row: 'Add Video'
