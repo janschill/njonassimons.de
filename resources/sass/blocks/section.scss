@@ -1,0 +1,7 @@
+.section {
+  padding: 40px 0;
+
+  @include breakpoint('m') {
+    padding: 20px 0;
+  }
+}

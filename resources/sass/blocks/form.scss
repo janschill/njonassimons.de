@@ -1,0 +1,48 @@
+.form {
+  display: block;
+
+  @include clearfix;
+}
+
+.form__field-set {
+  border: none;
+}
+
+.form__field-set--short {
+  width: 30%;
+}
+
+.form__field-set--right {
+  margin-bottom: 15px;
+
+  @include breakpoint('m') {
+    width: 75%;
+    float: right;
+  }
+}
+
+.form__field + .form__field {
+  margin-top: 10px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: lowercase;
+}
+
+.form__input {
+  width: 100%;
+  border: 1px solid $color-secondary;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.form__field--error .form__input {
+  border-color: $color-danger;
+  background-color: lighten($color-danger, 60%);
+}
+
+.form__field--error .form__label {
+  color: $color-danger;
+}

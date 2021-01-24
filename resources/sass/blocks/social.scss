@@ -1,0 +1,77 @@
+.social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include breakpoint('m') {
+    display: block;
+    position: absolute;
+    bottom: 120px;
+    right: -40px;
+  }
+
+  @include breakpoint('xl') {
+    right: -40px;
+  }
+}
+
+.social__list {
+  display: flex;
+  margin: 0 auto;
+
+  @include breakpoint('m') {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.social__list-item + .social__list-item {
+  margin-left: 10px;
+
+  @include breakpoint('m') {
+    margin-left: 0;
+  }
+}
+
+.social__link {
+  display: inline-block;
+  padding: 5px;
+}
+
+.social__link:hover {
+  .icon__path--instagram-camera {
+    fill: $color-instagram;
+  }
+
+  .icon__path--linkedin {
+    fill: $color-linkedin;
+    stroke: $color-linkedin;
+  }
+
+  .icon__path--vimeo {
+    fill: $color-vimeo;
+  }
+
+  .icon__path--xing-left {
+    fill: $color-xing-left;
+  }
+
+  .icon__path--xing-right {
+    fill: $color-xing-right;
+  }
+
+  .icon__path--crew-united {
+    fill: $color-vimeo;
+    stroke: $color-vimeo;
+  }
+
+  .icon__path--mail {
+    fill: $color-vimeo;
+    stroke: $color-vimeo;
+  }
+
+  .icon__path--mail-letter {
+    fill: $color-vimeo;
+    stroke: $color-bright;
+  }
+}

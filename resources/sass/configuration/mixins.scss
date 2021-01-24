@@ -1,0 +1,51 @@
+@mixin clearfix() {
+  zoom: 1;
+
+  &::before,
+  &::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+@mixin width-default($width:80%) {
+  width: $width;
+  max-width: 65rem;
+
+  @include breakpoint('m') {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+@mixin width-large() {
+  width: 80%;
+  max-width: 70rem;
+}
+
+@mixin breakpoint($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  }
+
+  @else {
+    @error 'No value found for `#{$breakpoint}`. ' +
+      'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

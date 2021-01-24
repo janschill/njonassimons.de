@@ -1,0 +1,94 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: site_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Site Name'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: social
+        field:
+          fields:
+            -
+              handle: name
+              field:
+                input_type: text
+                antlers: false
+                display: Name
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: url
+              field:
+                input_type: url
+                antlers: false
+                display: URL
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: icon
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: Icon
+                type: assets
+                icon: assets
+                listable: hidden
+          mode: table
+          add_row: 'Add Link'
+          reorderable: true
+          display: Social
+          type: grid
+          icon: grid
+          instructions: 'Set social media links.'
+          listable: hidden
+  seo:
+    display: SEO
+    fields:
+      -
+        handle: title
+        field:
+          input_type: text
+          character_limit: 70
+          antlers: false
+          display: Title
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: description
+        field:
+          character_limit: '160'
+          antlers: false
+          display: Description
+          type: textarea
+          icon: textarea
+          listable: hidden
+          validate:
+            - required
+  design:
+    display: Design
+    fields:
+      -
+        handle: primary_color
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - HEXA
+          display: 'Primary color'
+          type: color
+          icon: color
+          listable: hidden

@@ -1,0 +1,47 @@
+.hamburger {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 30px;
+  cursor: pointer;
+
+  @include breakpoint('m') {
+    display: none;
+  }
+}
+
+.hamburger__inner {
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 300ms $cubic-bezier;
+  animation: drawLineHorizontally 700ms $cubic-bezier;
+}
+
+.hamburger__inner,
+.hamburger__inner::before,
+.hamburger__inner::after {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background-color: $color-secondary;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+  content: '';
+}
+
+.hamburger__inner::before {
+  top: -10px;
+  animation: drawLineHorizontally 500ms $cubic-bezier;
+}
+
+.hamburger__inner::after {
+  bottom: -10px;
+  animation: drawLineHorizontally 400ms $cubic-bezier;
+}
+
+.hamburger--activated .hamburger__inner {
+  transform: rotate(90deg);
+}

@@ -1,0 +1,75 @@
+.article {
+  padding: 15px 0;
+
+  @include clearfix;
+}
+
+.article--description {
+  padding: 15px 0;
+}
+
+.article--flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.article--short {
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article__header {
+  padding-bottom: 30px;
+}
+
+.article__aside {
+  max-width: 32rem;
+  float: right;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.article__aside--about {
+  @include breakpoint('m') {
+    width: 75%;
+  }
+}
+
+.article__list-item {
+  padding: 15px 0;
+}
+
+.article__list-item:first-of-type {
+  padding-top: 0;
+}
+
+.article__list-item:last-of-type {
+  padding-bottom: 0;
+}
+
+.article__list-item--half {
+  @include breakpoint('m') {
+    width: 48%;
+    float: left;
+  }
+}
+
+.article__list-item--half + .article__list-item--half {
+  @include breakpoint('m') {
+    margin-left: 4%;
+  }
+}
+
+.article__list-item--half + .article__list-item--half + .article__list-item {
+  clear: both;
+}
+
+.article__figure {
+  display: inline-block;
+}
+
+.article__figcaption {
+  font-size: 0.75rem;
+  text-align: right;
+}

@@ -1,0 +1,24 @@
+title: Projects
+template: projects/show
+layout: layout
+mount: home
+revisions: false
+route: '/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: false
+  tree:
+    -
+      entry: d8414bc3-d30a-4cc8-b0ba-d83f98fb5f64
+    -
+      entry: f5cb5f60-96c9-4047-8edd-74802dd05a9e
+    -
+      entry: bf7c1f88-49f3-4bac-bfa4-cefb1495aea7
+    -
+      entry: a59388fa-a683-4147-b923-39653dc9c033
+    -
+      entry: f33f18af-7d7a-47db-b816-33f586a4e846

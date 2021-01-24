@@ -1,0 +1,18 @@
+{{ grid | dump }}
+<main class="main">
+    <section class="section">
+        {{ grid }}
+        <div class="grid grid--{{ image | length }}">
+            {{ image }}
+            <img class="card__image card__image--lazy" data-srcwebp="{{ url }}" data-src="{{ url }}" src="{{ url }}"
+                alt="{{ alt }}">
+            {{ /image }}
+        </div>
+        {{ /grid }}
+
+        {{ content }}
+        <article class="article article--description">
+            <p>{{ taxonomy_terms }}{{ title }}{{ if !last }} | {{ /if }}{{ /taxonomy_terms }}</p>
+        </article>
+    </section>
+</main>
