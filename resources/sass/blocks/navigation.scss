@@ -1,66 +1,15 @@
 .navigation {
   font-family: 'Inconsolata', monospace;
   text-transform: lowercase;
-}
-
-.navigation--footer {
   display: none;
-
-  @include breakpoint('m') {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-.navigation--header {
-  position: absolute;
-  z-index: 1;
-  background: $color-primary;
-  left: 0;
-  width: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 300ms $cubic-bezier;
 }
 
 .navigation__list {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(-100vw);
-  transition: transform 300ms $cubic-bezier;
-
-  @include breakpoint('m') {
-    visibility: visible;
-    opacity: 1;
-    transform: none;
-    display: flex;
-    background-color: $color-primary;
-    padding: 0 15px;
-    z-index: 1;
-  }
+  display: flex;
 }
 
-.navigation--header .navigation__list {
-  @include breakpoint('m') {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-.navigation__list-item--hidden {
-  @include breakpoint('m') {
-    display: none;
-  }
-}
-
-.navigation--visible {
-  opacity: 1;
-  visibility: visible;
-
-  .navigation__list {
-    opacity: 1;
-    visibility: visible;
-    transition: transform 400ms $cubic-bezier;
-    transform: translateX(0);
-  }
+@include breakpoint('m') {
+    .navigation {
+        display: block;
+    }
 }

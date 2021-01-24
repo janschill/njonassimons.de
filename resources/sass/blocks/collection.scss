@@ -4,7 +4,6 @@
   padding-bottom: 50px;
 
   @include breakpoint('m') {
-    padding-top: 50px;
     grid-template-columns: repeat(2, 1fr);
   }
 
