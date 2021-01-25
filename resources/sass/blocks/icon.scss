@@ -17,7 +17,7 @@
 }
 
 .icon__path--logo {
-  fill: $color-secondary;
+  fill: var(--color-secondary);
 }
 
 .icon__path--inline {
@@ -26,22 +26,22 @@
 
 .icon__path--linkedin,
 .icon__path--crew-united {
-  fill: $color-secondary;
-  stroke: $color-secondary;
+  fill: var(--color-secondary);
+  stroke: var(--color-secondary);
 }
 
 .icon__path--xing,
 .icon__path--vimeo,
 .icon__path--mail-lid,
 .icon__path--instagram-camera {
-  fill: $color-secondary;
+  fill: var(--color-secondary);
 }
 
 .icon__path--mail-letter {
-  stroke: $color-bright;
-  fill: $color-secondary;
+  stroke: var(--color-bright);
+  fill: var(--color-secondary);
 }
 
 .icon__path--instagram-lens {
-  fill: $color-bright;
+  fill: var(--color-bright);
 }

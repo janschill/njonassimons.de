@@ -8,7 +8,7 @@
 }
 
 .alert--success {
-  background-color: $color-success-light;
-  border-color: $color-success;
-  color: $color-success;
+  background-color: var(--color-success)-light;
+  border-color: var(--color-success);
+  color: var(--color-success);
 }

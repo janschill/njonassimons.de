@@ -6,7 +6,7 @@
 
   @include breakpoint('m') {
     z-index: 1;
-    background-color: $color-primary;
+    background-color: var(--color-primary);
   }
 }
 
@@ -14,11 +14,11 @@
   display: inline-block;
   padding: 5px 0;
   text-decoration: none;
-  color: $color-secondary;
+  color: var(--color-secondary);
   line-height: 2;
   transition: fill 300ms $cubic-bezier;
 }
 
 .logo:hover .icon__path--logo {
-  fill: rgba($color-secondary, 0.8);
+  fill: rgba(var(--color-secondary), 0.8);
 }

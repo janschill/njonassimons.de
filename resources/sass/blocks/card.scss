@@ -57,7 +57,7 @@
   align-items: center;
   color: white;
   flex-direction: column;
-  background-color: rgba($color-dark, 0.4);
+  background-color: rgba(var(--color-dark), 0.4);
   opacity: 0;
   visibility: hidden;
   transition: opacity 500ms $cubic-bezier, visibility 500ms $cubic-bezier;

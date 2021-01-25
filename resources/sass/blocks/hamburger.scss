@@ -24,7 +24,7 @@
   left: 0;
   width: 30px;
   height: 1px;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
 }
 
 .hamburger__inner::before,

@@ -1,8 +1,8 @@
 html {
   font-family: 'CutiveMono', monospace;
   font-size: 16px;
-  color: $color-secondary;
-  background: $color-bright;
+  color: var(--color-secondary);
+  background: var(--color-bright);
 }
 
 body {
@@ -27,5 +27,5 @@ h6 {
 }
 
 a {
-  color: $color-secondary;
+  color: var(--color-secondary);
 }

@@ -40,38 +40,38 @@
 
 .social__link:hover {
   .icon__path--instagram-camera {
-    fill: $color-instagram;
+    fill: var(--color-instagram);
   }
 
   .icon__path--linkedin {
-    fill: $color-linkedin;
-    stroke: $color-linkedin;
+    fill: var(--color-linkedin);
+    stroke: var(--color-linkedin);
   }
 
   .icon__path--vimeo {
-    fill: $color-vimeo;
+    fill: var(--color-vimeo);
   }
 
   .icon__path--xing-left {
-    fill: $color-xing-left;
+    fill: var(--color-xing-left);
   }
 
   .icon__path--xing-right {
-    fill: $color-xing-right;
+    fill: var(--color-xing-right);
   }
 
   .icon__path--crew-united {
-    fill: $color-vimeo;
-    stroke: $color-vimeo;
+    fill: var(--color-vimeo);
+    stroke: var(--color-vimeo);
   }
 
   .icon__path--mail {
-    fill: $color-vimeo;
-    stroke: $color-vimeo;
+    fill: var(--color-vimeo);
+    stroke: var(--color-vimeo);
   }
 
   .icon__path--mail-letter {
-    fill: $color-vimeo;
-    stroke: $color-bright;
+    fill: var(--color-vimeo);
+    stroke: var(--color-bright);
   }
 }

@@ -33,16 +33,17 @@
 
 .form__input {
   width: 100%;
-  border: 1px solid $color-secondary;
+  border: 1px solid var(--color-secondary);
   padding: 8px;
   font-size: 1rem;
 }
 
 .form__field--error .form__input {
-  border-color: $color-danger;
-  background-color: lighten($color-danger, 60%);
+  border-color: var(--color-danger);
+  filter: brightness(60%);
+//   background-color: lighten(var(--color-danger), 60%);
 }
 
 .form__field--error .form__label {
-  color: $color-danger;
+  color: var(--color-danger);
 }

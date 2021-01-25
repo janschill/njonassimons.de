@@ -1,15 +1,18 @@
-$color-bright: #ffffff;
-$color-dark: #000000;
-$color-primary: #f2f2f2;
-$color-secondary: #3a3a3a;
-$color-success: #155724;
-$color-success-light: #d4edda;
-$color-danger: #721c24;
-$color-linkedin: #1478b0;
-$color-vimeo: #16272c;
-$color-xing-left: #146565;
-$color-xing-right: #acd344;
-$color-instagram: #d42771;
+:root {
+    --color-bright: #ffffff;
+    --color-dark: 0, 0, 0;
+    --color-primary: #f2f2f2;
+    --color-secondary: #3a3a3a;
+    --color-success: #155724;
+    --color-success-light: #d4edda;
+    --color-danger: #721c24;
+    --color-linkedin: #1478b0;
+    --color-vimeo: #16272c;
+    --color-xing-left: #146565;
+    --color-xing-right: #acd344;
+    --color-instagram: #d42771;
+  }
+
 
 $cubic-bezier: cubic-bezier(0.2, 0.3, 0.3, 0.8);
 $cubic-bezier-card: cubic-bezier(0.39, 0.575, 0.565, 1);
