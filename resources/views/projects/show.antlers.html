@@ -3,13 +3,13 @@
 
     {{ if video | is_empty }}
     <div class="grid grid--{{ image | length }}">
-        <!-- {{ glide:image fit="crop_focal"}} -->
+        {{ image }}
         <img class="card__image" src="{{ url }}" alt="{{ alt }}">
-        <!-- {{ /glide:image }} -->
+        {{ /image }}
     </div>
 
     {{ else }}
-    {{ video | dump }}
+    {{ video }}
     {{ partial:projects/video }}
     {{ /video }}
 

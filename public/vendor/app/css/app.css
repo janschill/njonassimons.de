@@ -80,6 +80,21 @@ th:not([align]) {
   text-align: left;
 }
 
+:root {
+  --color-bright: #ffffff;
+  --color-dark: 0, 0, 0;
+  --color-primary: #f2f2f2;
+  --color-secondary: #3a3a3a;
+  --color-success: #155724;
+  --color-success-light: #d4edda;
+  --color-danger: #721c24;
+  --color-linkedin: #1478b0;
+  --color-vimeo: #16272c;
+  --color-xing-left: #146565;
+  --color-xing-right: #acd344;
+  --color-instagram: #d42771;
+}
+
 @-webkit-keyframes drawLineHorizontally {
   0% {
     width: 0;
@@ -329,8 +344,8 @@ th:not([align]) {
 html {
   font-family: "CutiveMono", monospace;
   font-size: 16px;
-  color: #3a3a3a;
-  background: #ffffff;
+  color: var(--color-secondary);
+  background: var(--color-bright);
 }
 
 body {
@@ -355,7 +370,7 @@ h6 {
 }
 
 a {
-  color: #3a3a3a;
+  color: var(--color-secondary);
 }
 
 .article {
@@ -448,8 +463,8 @@ a {
   position: relative;
   width: 100%;
   border: 1px solid;
-  background-color: #3a3a3a;
-  color: #ffffff;
+  background-color: var(--color-secondary);
+  color: var(--color-bright);
   padding: 8px;
   font-size: 1rem;
   cursor: pointer;
@@ -459,7 +474,7 @@ a {
 .button::before {
   content: "";
   position: absolute;
-  background-color: #7a7a7a;
+  filter: brightness(25%);
   top: 0;
   bottom: 0;
   left: 0;
@@ -476,8 +491,8 @@ a {
   display: block;
   text-align: center;
   border: none;
-  background-color: #f2f2f2;
-  color: #3a3a3a;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .card {
@@ -546,7 +561,7 @@ a {
   align-items: center;
   color: white;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(var(--color-dark), 0.4);
   opacity: 0;
   visibility: hidden;
   transition: opacity 500ms cubic-bezier(0.2, 0.3, 0.3, 0.8), visibility 500ms cubic-bezier(0.2, 0.3, 0.3, 0.8);
@@ -646,18 +661,18 @@ a {
 
 .form__input {
   width: 100%;
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--color-secondary);
   padding: 8px;
   font-size: 1rem;
 }
 
 .form__field--error .form__input {
-  border-color: #721c24;
-  background-color: #f3cdd1;
+  border-color: var(--color-danger);
+  filter: brightness(60%);
 }
 
 .form__field--error .form__label {
-  color: #721c24;
+  color: var(--color-danger);
 }
 
 .grid {
@@ -723,7 +738,7 @@ a {
   left: 0;
   width: 30px;
   height: 1px;
-  background-color: #3a3a3a;
+  background-color: var(--color-secondary);
 }
 
 .hamburger__inner::before,
@@ -751,7 +766,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 2;
-  background-color: #f2f2f2;
+  background-color: var(--color-primary);
 }
 
 .header__inner {
@@ -788,7 +803,7 @@ a {
 }
 
 .icon__path--logo {
-  fill: #3a3a3a;
+  fill: var(--color-secondary);
 }
 
 .icon__path--inline {
@@ -797,24 +812,24 @@ a {
 
 .icon__path--linkedin,
 .icon__path--crew-united {
-  fill: #3a3a3a;
-  stroke: #3a3a3a;
+  fill: var(--color-secondary);
+  stroke: var(--color-secondary);
 }
 
 .icon__path--xing,
 .icon__path--vimeo,
 .icon__path--mail-lid,
 .icon__path--instagram-camera {
-  fill: #3a3a3a;
+  fill: var(--color-secondary);
 }
 
 .icon__path--mail-letter {
-  stroke: #ffffff;
-  fill: #3a3a3a;
+  stroke: var(--color-bright);
+  fill: var(--color-secondary);
 }
 
 .icon__path--instagram-lens {
-  fill: #ffffff;
+  fill: var(--color-bright);
 }
 
 .image--about {
@@ -827,7 +842,7 @@ a {
   text-align: center;
   font-style: italic;
   text-decoration: none;
-  color: #3a3a3a;
+  color: var(--color-secondary);
   font-size: 1.25rem;
 }
 
@@ -856,7 +871,7 @@ a {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #3a3a3a;
+    background-color: var(--color-secondary);
   }
 }
 
@@ -880,7 +895,7 @@ a {
 @media (min-width: 750px) {
   .logo {
     z-index: 1;
-    background-color: #f2f2f2;
+    background-color: var(--color-primary);
   }
 }
 
@@ -888,13 +903,13 @@ a {
   display: inline-block;
   padding: 5px 0;
   text-decoration: none;
-  color: #3a3a3a;
+  color: var(--color-secondary);
   line-height: 2;
   transition: fill 300ms cubic-bezier(0.2, 0.3, 0.3, 0.8);
 }
 
 .logo:hover .icon__path--logo {
-  fill: rgba(58, 58, 58, 0.8);
+  fill: rgba(var(--color-secondary), 0.8);
 }
 
 .main {
@@ -985,32 +1000,32 @@ a {
 }
 
 .social__link:hover .icon__path--instagram-camera {
-  fill: #d42771;
+  fill: var(--color-instagram);
 }
 .social__link:hover .icon__path--linkedin {
-  fill: #1478b0;
-  stroke: #1478b0;
+  fill: var(--color-linkedin);
+  stroke: var(--color-linkedin);
 }
 .social__link:hover .icon__path--vimeo {
-  fill: #16272c;
+  fill: var(--color-vimeo);
 }
 .social__link:hover .icon__path--xing-left {
-  fill: #146565;
+  fill: var(--color-xing-left);
 }
 .social__link:hover .icon__path--xing-right {
-  fill: #acd344;
+  fill: var(--color-xing-right);
 }
 .social__link:hover .icon__path--crew-united {
-  fill: #16272c;
-  stroke: #16272c;
+  fill: var(--color-vimeo);
+  stroke: var(--color-vimeo);
 }
 .social__link:hover .icon__path--mail {
-  fill: #16272c;
-  stroke: #16272c;
+  fill: var(--color-vimeo);
+  stroke: var(--color-vimeo);
 }
 .social__link:hover .icon__path--mail-letter {
-  fill: #16272c;
-  stroke: #ffffff;
+  fill: var(--color-vimeo);
+  stroke: var(--color-bright);
 }
 
 .title {
@@ -1035,7 +1050,7 @@ a {
   left: 25%;
   right: 0;
   height: 2px;
-  background-color: #3a3a3a;
+  background-color: var(--color-secondary);
 }
 
 .title--underline::after {
@@ -1045,7 +1060,7 @@ a {
   right: -40px;
   left: 100%;
   height: 2px;
-  background-color: #3a3a3a;
+  background-color: var(--color-secondary);
 }
 
 .video {

@@ -81,14 +81,74 @@ sections:
     display: Design
     fields:
       -
-        handle: primary_color
+        handle: color_primary
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          display: 'Color Primary'
+          type: color
+          icon: color
+          listable: hidden
+          color_modes:
+            - HEXA
+      -
+        handle: color_secondary
         field:
           theme: classic
           lock_opacity: false
           default_color_mode: HEXA
           color_modes:
             - HEXA
-          display: 'Primary color'
+          display: 'Color Secondary'
+          type: color
+          icon: color
+          listable: hidden
+      -
+        handle: color_bright
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - HEXA
+          display: 'Color Bright'
+          type: color
+          icon: color
+          listable: hidden
+      -
+        handle: color_dark
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - HEXA
+          display: 'Color Dark'
+          type: color
+          icon: color
+          listable: hidden
+      -
+        handle: color_success
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - HEXA
+          display: 'Color Success'
+          type: color
+          icon: color
+          listable: hidden
+      -
+        handle: color_danger
+        field:
+          theme: nano
+          lock_opacity: false
+          default_color_mode: RGBA
+          color_modes:
+            - rgba
+          display: 'Color Danger'
           type: color
           icon: color
           listable: hidden
