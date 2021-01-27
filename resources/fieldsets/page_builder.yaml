@@ -1,0 +1,37 @@
+title: 'Page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      collapse: true
+      sets:
+        form:
+          display: Form
+          fields:
+            -
+              import: form
+        collection:
+          display: Collection
+          fields:
+            -
+              handle: collection
+              field:
+                mode: default
+                display: Collection
+                type: collections
+                icon: collections
+                listable: hidden
+        figure:
+          display: Figure
+          fields:
+            -
+              import: figure
+        article:
+          display: Article
+          fields:
+            -
+              import: article
+      display: 'Page builder'
+      type: replicator
+      icon: replicator
+      listable: false

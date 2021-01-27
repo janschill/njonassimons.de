@@ -1,0 +1,27 @@
+<article class="article article--short">
+    <header class="article__header">
+        <h2 id="{{ title }}" class="title title--underline title--bold">{{ title }}</h2>
+    </header>
+    <aside class="article__aside">
+        {{ form:contact class="form" }}
+        {{ if success }}
+        <small class="alert alert--success">{{ success }}</small>
+        {{ /if }}
+        <fieldset class="form__field-set form__field-set--right">
+
+            {{ fields }}
+            <div class="form__field{{ error ? ' form__field--error' : '' }}">
+                <label class="form__label" for="{{ handle }}">{{ display }}</label>
+                {{ field }}
+            </div>
+            {{ /fields }}
+        </fieldset>
+        <fieldset class="form__field-set form__field-set--short">
+            <div class="form__field">
+                <button class="button" type="submit">senden</button>
+            </div>
+        </fieldset>
+
+        {{ /form:contact }}
+    </aside>
+</article>

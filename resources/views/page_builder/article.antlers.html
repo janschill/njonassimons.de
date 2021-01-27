@@ -1,0 +1,24 @@
+<article class="article article--short">
+    <header class="article__header">
+        <h2 class="title title--underline title--bold">{{ title }}</h2>
+    </header>
+    {{ article }}
+    {{ if type == "text" }}
+    <aside class="article__aside article__aside--about">
+        {{ text }}
+    </aside>
+    {{ else }}
+    {{ if type == "figure" }}
+    <figure class="article__figure">
+        <picture>
+            <img class="image image--about" src="{{ image }}"
+                alt="Niels-Jonas Simons macht Videos, Fotos und Gestaltung jeglicher Art in Köln.">
+        </picture>
+        <figcaption class="article__figcaption">
+            {{ caption }}
+        </figcaption>
+    </figure>
+    {{ /if }}
+    {{ /if }}
+    {{ /article }}
+</article>
