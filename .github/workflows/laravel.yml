@@ -15,11 +15,11 @@ jobs:
     - name: Set up Node
       uses: actions/setup-node@v2.1.4
       with:
-        node-version: '12.x'
+        node-version: '15.x'
     - run: npm install
     - uses: shivammathur/setup-php@b7d1d9c9a92d8d8463ce36d7f60da34d461724f8
       with:
-        php-version: '8.0'
+        php-version: '7.3'
     - uses: actions/checkout@v2
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
