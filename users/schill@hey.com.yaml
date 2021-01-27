@@ -10,3 +10,12 @@ preferences:
         - title
         - slug
       after_save: continue_editing
+    pages:
+      after_save: continue_editing
+  forms:
+    contact:
+      columns:
+        - name
+        - email_address
+        - datestamp
+        - textarea

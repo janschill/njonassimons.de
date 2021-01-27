@@ -305,6 +305,20 @@ th:not([align]) {
   }
 }
 @font-face {
+  font-family: "GT America";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/gtamerica/gt-america-expanded-regular-trial.woff2");
+}
+@font-face {
+  font-family: "GT America";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/gtamerica/gt-america-extended-medium-trial.woff2");
+}
+@font-face {
   font-family: "Lato";
   font-display: swap;
   font-style: normal;
@@ -358,6 +372,12 @@ textarea {
   border-radius: 0;
 }
 
+p {
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
 h1,
 h2,
 h3,
@@ -371,6 +391,26 @@ h6 {
 
 a {
   color: var(--color-secondary);
+}
+
+.alert {
+  display: block;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  margin-bottom: 20px;
+}
+
+.alert--success {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.alert--danger {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+  color: var(--color-success);
 }
 
 .article {
@@ -668,7 +708,7 @@ a {
 
 .form__field--error .form__input {
   border-color: var(--color-danger);
-  filter: brightness(60%);
+  filter: brightness(90%);
 }
 
 .form__field--error .form__label {
@@ -887,8 +927,8 @@ a {
 }
 
 .logo {
-  font-family: Lato;
-  font-weight: 900;
+  font-family: "GT America";
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
