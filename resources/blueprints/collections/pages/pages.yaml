@@ -11,13 +11,7 @@ sections:
           validate:
             - required
       -
-        handle: template
-        field:
-          hide_partials: true
-          display: Template
-          type: template
-          icon: template
-          listable: hidden
+        import: page_builder
   sidebar:
     display: Sidebar
     fields:

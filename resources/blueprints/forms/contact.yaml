@@ -18,7 +18,7 @@ sections:
         field:
           input_type: email
           antlers: false
-          display: 'Email address'
+          display: 'E-Mail Adresse'
           type: text
           icon: text
           listable: hidden
@@ -28,7 +28,7 @@ sections:
         handle: textarea
         field:
           antlers: false
-          display: Textarea
+          display: Nachricht
           type: textarea
           icon: textarea
           listable: hidden
