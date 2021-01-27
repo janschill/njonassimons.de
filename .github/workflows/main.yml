@@ -1,0 +1,21 @@
+name: Static Code Analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Psalm – Static Analysis for PHP
+        uses: psalm/psalm-github-actions@1.1.2
+        with:
+          security_analysis: true
