@@ -40,8 +40,7 @@
 
 .form__field--error .form__input {
   border-color: var(--color-danger);
-  filter: brightness(60%);
-//   background-color: lighten(var(--color-danger), 60%);
+  filter: brightness(90%);
 }
 
 .form__field--error .form__label {
