@@ -6,9 +6,7 @@ data:
       name: Instagram
       url: 'https://instagram.com'
       icon: {  }
-  title: 'Niels-Jonas – portfolio | video | foto | gestaltung | köln'
-  description: 'Niels-Jonas Simons macht Videos, Fotos und Gestaltung jeglicher Art in Köln.'
-  primary_color: 'rgba(0, 0, 0, 1)'
-  secondary_color: '#FD0808'
+  title: 'Niels-Jonas – portfolio | video | köln'
+  description: 'Niels-Jonas Simons macht Videos in Köln.'
   color_bright: '#2F3251'
   color_danger: 'rgba(179, 24, 24, 1)'

@@ -107,6 +107,8 @@ sections:
           type: grid
           icon: grid
           listable: hidden
+      -
+        import: page_builder
   sidebar:
     display: Sidebar
     fields:
