@@ -299,6 +299,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   pg (~> 1.1)
