@@ -1,0 +1,8 @@
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: start;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  list-style-type: none;
+}
