@@ -21,6 +21,8 @@ Spina::Theme.register do |theme|
   # - Option
   # - Repeater
   theme.parts = [
+    {name: "thumbnail", title: "Thumbnail", part_type: "Spina::Parts::Image"},
+    {name: "subtitle", title: "Subtitle", part_type: "Spina::Parts::Line"},
     {name: "text", title: "Body", part_type: "Spina::Parts::Text"},
     {name: "image", title: "Image", part_type: "Spina::Parts::Image"},
     {name: "image_caption", title: "Caption", part_type: "Spina::Parts::Line"},
@@ -56,8 +58,8 @@ Spina::Theme.register do |theme|
   # You define which parts you want to enable for every view template
   # by referencing them from the theme.parts configuration above.
   theme.view_templates = [
-    {name: "project", title: "Project", description: "Template for project", parts: %w[text images videos]},
-    {name: "portfolio", title: "Portfolio", description: "Template for portfolio", parts: %w[]},
+    {name: "project", title: "Project", description: "Template for project", parts: %w[subtitle thumbnail text images videos]},
+    {name: "portfolio", title: "Portfolio", description: "Template for portfolio"},
     {name: "blog", title: "Blog", description: "Template for blog", parts: %w[]},
     {name: "contact", title: "Kontakt", description: "Template for contact", parts: %w[text]}
   ]
