@@ -48,7 +48,7 @@ Spina::Theme.register do |theme|
     {
       name: "videos",
       title: "Videos",
-      parts: %w[video_platform_option video_id],
+      parts: %w[video_id video_platform_option],
       part_type: "Spina::Parts::Repeater"
     }
   ]
