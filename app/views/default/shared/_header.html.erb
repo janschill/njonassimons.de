@@ -1,0 +1,7 @@
+<header class="header" data-controller="header">
+  <div class="hamburger" data-header-target="hamburger" data-action="click->header#toggle">
+      <span class="hamburger__inner"></span>
+  </div>
+  <h1 class="logo"><a class="link" href="/"><%= current_account.name %></a></h1>
+  <%= render "default/shared/navigation" %>
+</header>
