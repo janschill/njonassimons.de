@@ -1,2 +1,9 @@
-<% presenter = Spina::MenuPresenter.new(Spina::Page.all) %>
-<%= presenter.to_html %>
+<nav class="navigation" data-header-target="navigation">
+  <ul class="navigation__list">
+  <% Spina::Navigation.all.find { |nav| nav.name.eql?("main") }.pages.each do |page| %>
+    <li class="navigation__list-item">
+      <%= link_to page.menu_title, {}, class: "link" %>
+    </li>
+  <% end %>
+  </ul>
+</nav>
