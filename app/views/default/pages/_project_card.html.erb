@@ -1,5 +1,5 @@
 <li class="card card--fade">
-    <a class="card__link" href="{{ slug }}">
+    <a class="card__link" href="<%= project.menu_title %>">
         <figure class="card__figure">
             <%= project.content.image_tag(:thumbnail, {resize_to_fill: [1000, 1000]}, {class: "card__image", loading: "lazy"}) %>
             <figcaption class="card__figcaption">
