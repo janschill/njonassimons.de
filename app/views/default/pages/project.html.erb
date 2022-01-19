@@ -1,5 +1,5 @@
-<article class="project">
-  <section class="project__section project__section--left">
+<article class="article">
+  <section>
     <% repeater(:images) do |repeater_content| %>
       <%= repeater_content.content.image_tag(:image, {resize_to_fill: [1000, 1000]}, {class: "image", loading: "lazy"}) %>
     <% end %>
