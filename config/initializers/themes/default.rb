@@ -60,8 +60,8 @@ Spina::Theme.register do |theme|
   theme.view_templates = [
     {name: "project", title: "Project", description: "Template for project", parts: %w[subtitle thumbnail text images videos]},
     {name: "portfolio", title: "Portfolio", description: "Template for portfolio"},
-    {name: "blog", title: "Blog", description: "Template for blog", parts: %w[]},
-    {name: "contact", title: "Kontakt", description: "Template for contact", parts: %w[text]}
+    {name: "blog", title: "Blog", description: "Template for blog"},
+    {name: "contact", title: "Kontakt", description: "Template for contact", parts: %w[image text]}
   ]
 
   # Custom pages

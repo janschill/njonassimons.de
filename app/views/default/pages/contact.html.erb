@@ -1,1 +1,8 @@
-<h1>Kontakt</h1>
+<article class="article">
+  <section class="article__section article__section--left">
+    <%= page.content.image_tag(:image, {resize_to_fill: [1000, 1000]}, {class: "image", loading: "lazy"}) %>
+  </section>
+  <section class="richtext">
+    <%= content.html(:text) %>
+  </section>
+</article>
