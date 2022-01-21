@@ -16,8 +16,8 @@ gem "spina", "~> 2.2"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
-gem "sentry-ruby"
-gem "sentry-rails"
+gem "sentry-ruby", "~> 5.0"
+gem "sentry-rails", "~> 5.0"
 
 group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]

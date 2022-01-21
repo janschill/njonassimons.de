@@ -2,7 +2,7 @@ Sentry.init do |config|
   config.dsn = ENV.fetch("SENTRY_DSN")
   config.breadcrumbs_logger = [:active_support_logger, :http_logger]
   # Only run Sentry in production
-  config.environments = %w[ production ]
+  config.environment = %w[ production ]
 
   # Set tracesSampleRate to 1.0 to capture 100%
   # of transactions for performance monitoring.
