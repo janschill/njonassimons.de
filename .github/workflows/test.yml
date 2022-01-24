@@ -11,6 +11,7 @@ jobs:
 
     env:
       RAILS_ENV: test
+      POSTGRES_USER: njonassimons_de_test
       DATABASE_URL: postgres://postgres:postgres@localhost:5432
       DISABLE_BOOTSNAP: true
       DISABLE_BOOTSNAP_LOAD_PATH_CACHE: true
