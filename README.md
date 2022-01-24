@@ -10,6 +10,9 @@ rails spina:first_deploy
 
 Copy .env
 Install docker-compose
+`rm config/credentials.yml.enc` then in local Docker run: `RAILS_ENV=production bin/rails credentials:edit`, save master.key in password manager
+add to .env
+https://guides.rubyonrails.org/security.html#custom-credentials
 
 ## Things Done
 
