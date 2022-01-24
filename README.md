@@ -1,5 +1,13 @@
 # NJ
 
+## First Deploy
+
+```sh
+rails db:setup
+rails db:migrate
+rails spina:first_deploy
+```
+
 ## Things Done
 
 ```sh
