@@ -1,0 +1,40 @@
+---
+name: Deploy latest image to production
+
+on:
+  workflow_run:
+    workflows: ["Create and Publish a Docker Image"]
+    # branches: [main]
+    types:
+      - completed
+
+jobs:
+  deploy-image:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    needs: build-and-push-image
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: SCP docker-compose.production.yml
+      uses: appleboy/scp-action@v0.1.1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        source: "docker-compose.production.yml"
+        target: "app"
+    - name: Deploy Docker Image to Production Server
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+          docker pull ghcr.io/${{ github.repository }}:latest
+          cd app
+          docker-compose -f docker-compose.production.yml up -d
