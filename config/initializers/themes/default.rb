@@ -27,15 +27,9 @@ Spina::Theme.register do |theme|
     {name: "image", title: "Image", part_type: "Spina::Parts::Image"},
     {name: "image_caption", title: "Caption", part_type: "Spina::Parts::Line"},
     {
-      name: "image_show_caption?",
-      title: "Show Caption?",
-      part_type: "Spina::Parts::Option",
-      options: ["Show", "Hide"]
-    },
-    {
       name: "images",
       title: "Images",
-      parts: %w[image image_caption image_show_caption?],
+      parts: %w[image image_caption],
       part_type: "Spina::Parts::Repeater"
     },
     {name: "video_id", title: "Video ID", part_type: "Spina::Parts::Line"},
