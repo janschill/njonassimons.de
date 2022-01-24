@@ -10,13 +10,13 @@ on:
 
 jobs:
   deploy-image:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: SCP docker-compose.production.yml
+      if: ${{ github.event.workflow_run.conclusion == 'success' }}
       uses: appleboy/scp-action@v0.1.1
       with:
         host: ${{ secrets.HOST }}
@@ -26,6 +26,7 @@ jobs:
         source: "docker-compose.production.yml"
         target: "app"
     - name: Deploy Docker Image to Production Server
+      if: ${{ github.event.workflow_run.conclusion == 'success' }}
       uses: appleboy/ssh-action@v0.1.4
       with:
         host: ${{ secrets.HOST }}
