@@ -4,7 +4,7 @@ name: Deploy latest image to production
 on:
   workflow_run:
     workflows: ["Create and Publish a Docker Image"]
-    # branches: [main]
+    branches: [main]
     types:
       - completed
 
