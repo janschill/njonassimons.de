@@ -8,6 +8,9 @@ rails db:migrate
 rails spina:first_deploy
 ```
 
+Copy .env
+Install docker-compose
+
 ## Things Done
 
 ```sh
