@@ -19,7 +19,7 @@ RUN bundle install
 COPY app /app/app
 COPY bin /app/bin
 COPY config /app/config
-COPY db/seeds.rb /app/db/
+COPY db /app/db/
 COPY lib /app/lib
 COPY public /app/public
 COPY storage /app/storage
