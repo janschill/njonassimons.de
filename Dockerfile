@@ -27,6 +27,8 @@ COPY .ruby-version /app/
 COPY config.ru /app/
 COPY Rakefile /app/
 
+RUN bundle exec rake assets:precompile
+
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
