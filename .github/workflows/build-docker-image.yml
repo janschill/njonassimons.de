@@ -40,7 +40,7 @@ jobs:
           tags: |
             type=ref,event=branch
             type=sha
-            type=raw,value=latest,enable=${{ endsWith(github.ref, 'main') }}
+            type=raw,value=latest,enable=${{ endsWith(branch, 'main') }}
       - name: Build and Push Docker Image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
