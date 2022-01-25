@@ -10,18 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      RAILS_ENV: test
-      POSTGRES_USER: njonassimons_de_test
-      DATABASE_URL: postgres://postgres:postgres@localhost:5432
-      DISABLE_BOOTSNAP: true
-      DISABLE_BOOTSNAP_LOAD_PATH_CACHE: true
-
     services:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_PASSWORD: password
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -31,16 +25,34 @@ jobs:
           - 5432:5432
 
     steps:
-      - uses: actions/checkout@v2.4.0
+    - uses: actions/checkout@v2
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
+    - name: Set up Ruby
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
 
-      - name: Create database
-        run: |
-          bundle exec rails db:create
-          bundle exec rails db:schema:load
-      - name: Run tests
-        run: bundle exec rake
+    - name: Install PostgreSQL client
+      run: |
+        sudo apt-get -yqq install libpq-dev
+
+    - name: Build App
+      env:
+        PGHOST: localhost
+        PGUSER: postgres
+        PGPASSWORD: postgres
+        RAILS_ENV: test
+      run: |
+        bin/rails db:setup
+
+    - name: Run Tests
+      env:
+        PGHOST: localhost
+        PGUSER: postgres
+        PGPASSWORD: postgres
+        RAILS_ENV: test
+      run: |
+        # bundle exec rake test
+        # bundle exec rake test:system
+        # or Rspec
+        bundle exec rspec
