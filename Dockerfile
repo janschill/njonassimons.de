@@ -22,7 +22,6 @@ COPY config /app/config
 COPY db /app/db/
 COPY lib /app/lib
 COPY public /app/public
-COPY storage /app/storage
 COPY .ruby-version /app/
 COPY config.ru /app/
 COPY Rakefile /app/
