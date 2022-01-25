@@ -3,10 +3,6 @@
   position: relative;
 }
 
-.card--fade {
-  animation: scale-up-tl 1s var(--cubic-bezier-card) both;
-}
-
 .card__figure {
   display: block;
   position: relative;

@@ -1,3 +1,4 @@
 .logo {
   font-size: var(--font-size-large);
+  animation: fadein 2s var(--cubic-bezier);
 }
