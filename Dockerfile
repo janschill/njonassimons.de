@@ -8,7 +8,6 @@ RUN apt-get update -qq &&\
 
 WORKDIR /app
 
-# Bundler
 RUN gem update --no-document
 RUN gem install --no-document bundler
 
