@@ -1,5 +1,5 @@
 ---
-name: Create and Publish a Docker Image
+name: Create, Publish, and Deploy Docker Image
 
 on:
   push:
@@ -47,10 +47,11 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
- 
-  deploy-production:
-    runs-on: ubuntu-latest
+
+  pull-and-deploy-image:
     needs: build-and-push-image
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2

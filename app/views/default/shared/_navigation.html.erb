@@ -2,7 +2,7 @@
   <ul class="navigation__list">
   <% Spina::Navigation.all.find { |nav| nav.name.eql?("main") }.pages.each do |page| %>
     <li class="navigation__list-item">
-      <%= link_to page.menu_title, {}, class: "link" %>
+      <a href="/<%= page.slug == "portfolio" ? "" : page.slug %>" class="link"><%= page.menu_title %></a>
     </li>
   <% end %>
   </ul>

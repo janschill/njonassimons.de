@@ -5,7 +5,6 @@ ruby "3.1.0"
 
 gem "rails", "~> 7.0.1"
 gem "sprockets-rails"
-gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
@@ -18,6 +17,7 @@ gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem "sentry-ruby", "~> 5.0"
 gem "sentry-rails", "~> 5.0"
+gem "pg", "~> 1.1"
 
 group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
