@@ -24,13 +24,13 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   flex-direction: column;
-  background-color: rgba(var(--color-dark), 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   transition: opacity 500ms var(--cubic-bezier), visibility 500ms var(--cubic-bezier);
