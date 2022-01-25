@@ -1,5 +1,9 @@
 # NJ
 
+## Status
+
+[![Lint](https://github.com/janschill/njonassimons.de/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/janschill/njonassimons.de/actions/workflows/lint.yml) [![Test](https://github.com/janschill/njonassimons.de/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/janschill/njonassimons.de/actions/workflows/test.yml) [![CodeQL](https://github.com/janschill/njonassimons.de/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/janschill/njonassimons.de/actions/workflows/codeql-analysis.yml)
+
 ## First Deploy
 
 ```sh
