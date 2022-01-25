@@ -7,3 +7,11 @@
   font-weight: bold;
   margin-bottom: 1em;
 }
+
+.richtext strong {
+  font-weight: bold;
+}
+
+.richtext em {
+  font-style: italic;
+}
