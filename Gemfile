@@ -17,10 +17,8 @@ gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem "sentry-ruby", "~> 5.0"
 gem "sentry-rails", "~> 5.0"
+gem "pg", "~> 1.1"
 
-group :development, :production do
-  gem "pg", "~> 1.1"
-end
 
 group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
@@ -37,5 +35,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem "sqlite3"
 end
