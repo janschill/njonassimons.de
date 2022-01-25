@@ -12,23 +12,8 @@ jobs:
 
     env:
       RAILS_ENV: test
-      POSTGRES_USER: njonassimons_de_test
-      DATABASE_URL: postgres://postgres:postgres@localhost:5432
       DISABLE_BOOTSNAP: true
       DISABLE_BOOTSNAP_LOAD_PATH_CACHE: true
-
-    services:
-      postgres:
-        image: postgres:14
-        env:
-          POSTGRES_PASSWORD: password
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-        ports:
-          - 5432:5432
 
     steps:
       - uses: actions/checkout@v2.4.0
