@@ -18,6 +18,7 @@ gem "image_processing", "~> 1.2"
 gem "sentry-ruby", "~> 5.0"
 gem "sentry-rails", "~> 5.0"
 gem "pg", "~> 1.1"
+gem "ddtrace", "~> 0.54.2"
 
 group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
