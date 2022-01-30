@@ -1,8 +1,10 @@
 .logo {
   font-size: var(--font-size-medium);
+  font-weight: 800;
   animation: fadein 2s var(--cubic-bezier);
 }
 
 .logo__link {
   text-decoration: none;
+  color: var(--color-dark);
 }

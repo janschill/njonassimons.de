@@ -1,0 +1,20 @@
+.post {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.post__image {
+  margin-bottom: 2em;
+}
+
+@media all and (min-width: 750px) {
+  .post {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    margin-top: 7em;
+  }
+
+  .post__image {
+    padding: 7em 9em;
+  }
+}
