@@ -2,8 +2,8 @@
   <ul class="navigation__list">
   <% Spina::Navigation.all.find { |nav| nav.name.eql?("main") }.pages.sorted.each do |page| %>
     <li class="navigation__list-item">
-      <% link_href = page.slug == "portfolio" ? "" : page.slug %>
-      <%= render "default/shared/link", locals: { link_href: link_href, link_name: page.menu_title } %>
+      <% link_href = page.slug == "portfolio" ? "/" : page.slug %>
+      <%= render "default/shared/link", locals: { link_href: link_href, link_name: page.menu_title, class_name: "link--navigation" } %>
     </li>
   <% end %>
   </ul>
