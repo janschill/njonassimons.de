@@ -2,6 +2,8 @@
   <div class="hamburger" data-header-target="hamburger" data-action="click->header#toggle">
       <span class="hamburger__inner"></span>
   </div>
-  <h1 class="logo"><a class="link" href="/"><%= current_account.name %></a></h1>
+  <h1 class="logo">
+    <%= render "default/shared/link", locals: { link_href: "/", link_name: current_account.name, class_name: "link--logo" } %>
+  </h1>
   <%= render "default/shared/navigation" %>
 </header>
