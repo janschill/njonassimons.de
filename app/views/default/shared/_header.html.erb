@@ -3,7 +3,7 @@
       <span class="hamburger__inner"></span>
   </div>
   <h1 class="logo">
-    <%= render "default/shared/link", locals: { link_href: "/", link_name: current_account.name, class_name: "link--logo" } %>
+    <a href="/" class="logo__link"><%= current_account.name %></a>
   </h1>
   <%= render "default/shared/navigation" %>
 </header>

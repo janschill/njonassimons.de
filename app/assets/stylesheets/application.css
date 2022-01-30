@@ -43,9 +43,31 @@
   --font-size-large: 1.85rem;
 }
 
+@font-face {
+  font-family: "GT America";
+  font-display: swap;
+  font-weight: 700;
+  src: url("/assets/GT-America-Expanded-Regular.ttf");
+  src:
+    url("/assets/GT-America-Expanded-Regular.woff2") format("woff2"),
+    url("/assets/GT-America-Expanded-Regular.woff") format("woff"),
+    url("/assets/GT-America-Expanded-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "GT America";
+  font-display: swap;
+  font-weight: 800;
+  src: url("/assets/GT-America-Expanded-Medium.ttf");
+  src:
+    url("/assets/GT-America-Expanded-Medium.woff2") format("woff2"),
+    url("/assets/GT-America-Expanded-Medium.woff") format("woff"),
+    url("/assets/GT-America-Expanded-Medium.otf") format("otf");
+}
+
 html {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: "GT America", sans-serif;
 }
 
 body {
