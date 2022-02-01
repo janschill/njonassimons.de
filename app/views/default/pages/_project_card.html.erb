@@ -4,7 +4,9 @@
             <%= project.content.image_tag(:thumbnail, {resize_to_fill: [1000, 1000]}, {class: "card__image", loading: "lazy"}) %>
             <figcaption class="card__figcaption">
                 <h3 class="card__title"><%= project.title %></h3>
-                <p class="card__category"><%= project.content(:subtitle) %></p>
+                <% unless project.content(:subtitle).empty? %>
+                    <p class="card__category"><%= project.content(:subtitle) %></p>
+                <% end %>
             </figcaption>
         </figure>
     </a>
