@@ -3,21 +3,28 @@
   display: none;
 }
 
-.navigation--visible {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: white;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@media all and (max-width: 750px) {
+  .navigation--visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    z-index: 1;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    padding: 0 2em 4em 0;
+  }
 
-.navigation--visible .navigation__list-item {
-  padding: 2em;
+  .navigation--visible .navigation__list {
+    text-align: right;
+  }
+
+  .navigation--visible .navigation__list-item {
+    padding: 2em;
+  }
 }
 
 @media all and (min-width: 750px) {
