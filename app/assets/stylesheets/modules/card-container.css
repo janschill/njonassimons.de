@@ -8,8 +8,8 @@
 @media all and (min-width: 750px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
   }
 }
 
