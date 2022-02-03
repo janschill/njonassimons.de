@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <browserconfig>
-  <msapplication>
-    <tile>
-      <square70x70logo src="/images/icons/favicon/ms-icon-70x70.png"/>
-      <square144x144logo src="/images/icons/favicon/ms-icon-144x144.png"/>
-      <square150x150logo src="/images/icons/favicon/ms-icon-150x150.png"/>
-      <square310x310logo src="/images/icons/favicon/ms-icon-310x310.png"/>
-      <square558x558logo src="/images/icons/favicon/ms-icon-558x558.png"/>
-      <square558x270logo src="/images/icons/favicon/ms-icon-558x270.png"/>
-      <TileColor>#f2f2f2</TileColor>
-    </tile>
-  </msapplication>
+    <msapplication>
+        <tile>
+            <square150x150logo src="/assets/mstile-150x150.png"/>
+            <TileColor>#da532c</TileColor>
+        </tile>
+    </msapplication>
 </browserconfig>
