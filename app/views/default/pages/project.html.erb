@@ -1,10 +1,10 @@
 <article class="article">
   <section>
-    <% repeater(:images) do |repeater_content| %>
-      <%= repeater_content.content.image_tag(:image, {resize_to_fill: [1000, 1000]}, {class: "image", loading: "lazy"}) %>
+    <% images(:images) do |image| %>
+      <%= content.image_tag(image, {}, {class: "image", loading: "lazy"}) %>
     <% end %>
-    <% repeater(:videos) do |repeater_content| %>
-      <%= render partial: "default/pages/video", locals: {video: repeater_content } %>
+    <% repeater(:videos) do |video| %>
+      <%= render partial: "default/pages/video", locals: {video: video } %>
     <% end %>
   </section>
   <section class="richtext">

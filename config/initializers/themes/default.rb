@@ -25,12 +25,10 @@ Spina::Theme.register do |theme|
     {name: "subtitle", title: "Subtitle", part_type: "Spina::Parts::Line"},
     {name: "text", title: "Body", part_type: "Spina::Parts::Text"},
     {name: "image", title: "Image", part_type: "Spina::Parts::Image"},
-    {name: "image_caption", title: "Caption", part_type: "Spina::Parts::Line"},
     {
       name: "images",
       title: "Images",
-      parts: %w[image image_caption],
-      part_type: "Spina::Parts::Repeater"
+      part_type: "Spina::Parts::ImageCollection"
     },
     {name: "video_id", title: "Video ID", part_type: "Spina::Parts::Line"},
     {
@@ -38,12 +36,6 @@ Spina::Theme.register do |theme|
       title: "Platform",
       part_type: "Spina::Parts::Option",
       options: ["YouTube", "Vimeo"]
-    },
-    {
-      name: "videos",
-      title: "Videos",
-      parts: %w[video_id video_platform_option],
-      part_type: "Spina::Parts::Repeater"
     }
   ]
 
@@ -54,6 +46,7 @@ Spina::Theme.register do |theme|
   theme.view_templates = [
     {name: "project", title: "Project", description: "Template for project", parts: %w[subtitle thumbnail text images videos]},
     {name: "portfolio", title: "Portfolio", description: "Template for portfolio"},
+    {name: "blog_post", title: "Blog Post", description: "Template for blog post", parts: %w[video]},
     {name: "blog", title: "Blog", description: "Template for blog"},
     {name: "contact", title: "Kontakt", description: "Template for contact", parts: %w[image text]}
   ]
@@ -83,7 +76,8 @@ Spina::Theme.register do |theme|
   # Think of resources as a collection of pages. They are managed separately in Spina
   # allowing you to separate these pages from the 'main' collection of pages.
   theme.resources = [
-    {name: "projects", label: "Projects", view_template: "project"}
+    {name: "projects", label: "Projects", view_template: "project"},
+    {name: "blog_posts", label: "Blog Posts", view_template: "blog_posts"}
   ]
 
   # Plugins (optional)
