@@ -12,6 +12,10 @@
   font-weight: 800;
 }
 
+.richtext a {
+  color: var(--color-text);
+}
+
 .richtext em {
   font-style: italic;
 }
