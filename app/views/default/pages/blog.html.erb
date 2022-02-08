@@ -1,13 +1,13 @@
 <% pages = Spina::Resource.find_by(name: "blog_posts").pages.reject(&:draft) %>
 <% page = pages.sample %>
+<% image = page.content(:image) %>
 <% video = video_from_page(page) %>
 
 <article class="post">
   <section class="post__image">
-    <% if page.content(:image) %>
+    <% if image && !image.attributes["filename"].eql?("") %>
       <%= page.content.image_tag(:image, {}, {class: "image", loading: "lazy"}) %>
-    <% end %>
-    <% if video %>
+    <% else %>
       <%= render partial: "default/pages/video", locals: {video: video } %>
     <% end %>
   </section>
