@@ -74,5 +74,6 @@ jobs:
           script: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
             docker pull ghcr.io/${{ github.repository }}:latest
+            docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
             cd app
             docker-compose -f docker-compose.production.yml up -d
