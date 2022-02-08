@@ -1,4 +1,5 @@
 Spina.configure do |config|
+  # Spina::Part.register(Spina::Parts::Video)
   # Locales
   # ===============
   # All locales your content should be available in.
@@ -75,4 +76,8 @@ Spina.configure do |config|
   # %i( bulgarian cyrillic danish german greek latin macedonian norwegian
   #     romanian russian serbian spanish swedish ukrainian vietnamese)
   # config.transliterations = %i(latin)
+end
+
+Rails.configuration.to_prepare do
+  Spina::Part.register(Spina::Parts::Video)
 end

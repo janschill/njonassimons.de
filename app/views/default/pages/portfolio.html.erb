@@ -1,6 +1,10 @@
 <% pages = Spina::Resource.find_by(name: "projects").pages.reject(&:draft) %>
-<ul class="card-container">
-<% pages.each do |page| %>
-  <%= render partial: "default/pages/project_card", locals: {project: page} %>
-<% end %>
-</ul>
+<% if pages.any? %>
+  <ul class="card-container">
+  <% pages.each do |page| %>
+    <%= render partial: "default/pages/project_card", locals: {project: page} %>
+  <% end %>
+  </ul>
+<% else %>
+  <div>Keine Projekte</div>
+<% end%>
