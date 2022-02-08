@@ -1,12 +1,14 @@
-<% page = Spina::Resource.find_by(name: "blog_posts").pages.sample %>
+<% pages = Spina::Resource.find_by(name: "blog_posts").pages.reject(&:draft) %>
+<% page = pages.sample %>
+<% video = video_from_page(page) %>
 
 <article class="post">
   <section class="post__image">
     <% if page.content(:image) %>
       <%= page.content.image_tag(:image, {}, {class: "image", loading: "lazy"}) %>
     <% end %>
-    <% repeater(page.content(:videos)) do |repeater_content| %>
-      <%= render partial: "default/pages/video", locals: {video: repeater_content } %>
+    <% if video %>
+      <%= render partial: "default/pages/video", locals: {video: video } %>
     <% end %>
   </section>
   <section class="richtext">

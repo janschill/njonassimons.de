@@ -3,7 +3,8 @@
     <% images(:images) do |image| %>
       <%= content.image_tag(image, {}, {class: "image", loading: "lazy"}) %>
     <% end %>
-    <% repeater(:videos) do |video| %>
+    <% repeater(:videos) do |video_repeater_content| %>
+      <% video = video_repeater_content.attributes["parts"].first %>
       <%= render partial: "default/pages/video", locals: {video: video } %>
     <% end %>
   </section>

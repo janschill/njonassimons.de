@@ -30,13 +30,7 @@ Spina::Theme.register do |theme|
       title: "Images",
       part_type: "Spina::Parts::ImageCollection"
     },
-    {name: "video_id", title: "Video ID", part_type: "Spina::Parts::Line"},
-    {
-      name: "video_platform_option",
-      title: "Platform",
-      part_type: "Spina::Parts::Option",
-      options: ["YouTube", "Vimeo"]
-    },
+    {name: "video", title: "Video", part_type: "Spina::Parts::Video"},
     {
       name: "videos",
       title: "Videos",
@@ -52,7 +46,7 @@ Spina::Theme.register do |theme|
   theme.view_templates = [
     {name: "project", title: "Project", description: "Template for project", parts: %w[subtitle thumbnail text images videos]},
     {name: "portfolio", title: "Portfolio", description: "Template for portfolio"},
-    {name: "blog_post", title: "Blog Post", description: "Template for blog post", parts: %w[video]},
+    {name: "blog_post", title: "Blog Post", description: "Template for blog post", parts: %w[video image text]},
     {name: "blog", title: "Blog", description: "Template for blog"},
     {name: "contact", title: "Kontakt", description: "Template for contact", parts: %w[image text]}
   ]
