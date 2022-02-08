@@ -36,6 +36,12 @@ Spina::Theme.register do |theme|
       title: "Platform",
       part_type: "Spina::Parts::Option",
       options: ["YouTube", "Vimeo"]
+    },
+    {
+      name: "videos",
+      title: "Videos",
+      parts: %w[video],
+      part_type: "Spina::Parts::Repeater"
     }
   ]
 
