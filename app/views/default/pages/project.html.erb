@@ -19,7 +19,7 @@
         <%= render partial: "default/pages/video", locals: {video: video } %>
       <% elsif content_type === "Image" %>
         <% if image && !image.filename.eql?("") %>
-        <%= page.content.image_tag(image, {}, {class: "image", loading: "lazy"}) %>
+        <%= page.content.image_tag(image, {}, {class: "image image--margin-bottom", loading: "lazy"}) %>
         <% end %>
       <% end %>
     <% end %>

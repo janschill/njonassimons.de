@@ -1,7 +1,7 @@
 <% video_platform = video.video_platform_option.downcase %>
 <% video_url = video.video_url %>
 
-<div class="video">
+<div class="video video--margin-bottom">
   <% if video_platform.eql?("youtube") %>
     <% video_url = "https://www.youtube.com/embed/#{video_url}" %>
     <iframe class="video__player" width="1920" height="1080" src="<%= video_url %>" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>

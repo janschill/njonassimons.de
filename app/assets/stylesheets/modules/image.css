@@ -1,3 +1,7 @@
 .image {
   width: 100%;
 }
+
+.image--margin-bottom {
+  margin-bottom: 2em;
+}
