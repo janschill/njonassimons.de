@@ -1,0 +1,35 @@
+<% content_type = f.object.attributes["content_type"] %>
+<div class="mt-6">
+  <h3>Content</h3>
+  <div class="mt-3">
+    <%= f.select :content_type,
+      ["Image", "Video"],
+      {},
+      {
+        onChange: '
+          const $select = this;
+          const $parent = $select.parentElement.parentElement;
+          const $video = $parent.querySelector(".content-form-video");
+          const $image = $parent.querySelector(".content-form-image");
+          const selectedContent = $select.value;
+
+          if (selectedContent === "Image") {
+            $image.classList.remove("hidden");
+            $video.classList.add("hidden");
+          } else if (selectedContent === "Video") {
+            $image.classList.add("hidden");
+            $video.classList.remove("hidden");
+          }
+        ',
+        id: "content-form-select"
+      }
+    %>
+  </div>
+
+  <section class="content-form-video mt-5<%= " hidden" if content_type.eql?("Image") %>">
+    <%= render "spina/admin/parts/videos/form", f: f %>
+  </section>
+  <section class="content-form-image mt-5<%= " hidden" if content_type.eql?("Video") %>">
+    <%= render "spina/admin/parts/images/form", f: f %>
+  </section>
+</div>

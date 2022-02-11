@@ -80,4 +80,5 @@ end
 
 Rails.configuration.to_prepare do
   Spina::Part.register(Spina::Parts::Video)
+  Spina::Part.register(Spina::Parts::Content)
 end
