@@ -13,7 +13,8 @@ RUN gem install --no-document bundler
 
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
-RUN bundle install
+COPY vendor/cache /app/vendor/cache
+RUN bundle install --quiet --local --jobs 4 || bundle check
 
 COPY app /app/app
 COPY bin /app/bin
