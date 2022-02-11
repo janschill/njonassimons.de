@@ -26,7 +26,9 @@ module Spina
       end
 
       def svg?
+        # rubocop:disable Performance/EndWith
         filename =~ /\.svg\z/
+        # rubocop:enable Performance/EndWith
       end
 
       def spina_image
