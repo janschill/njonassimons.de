@@ -1,4 +1,5 @@
 <% content_type = f.object.attributes["content_type"] %>
+Content Type: <%= content_type == "" %>
 <div class="mt-6">
   <h3>Content</h3>
   <div class="mt-3">
@@ -26,10 +27,10 @@
     %>
   </div>
 
-  <section class="content-form-video mt-5<%= " hidden" if content_type.eql?("Image") %>">
-    <%= render "spina/admin/parts/videos/form", f: f %>
-  </section>
   <section class="content-form-image mt-5<%= " hidden" if content_type.eql?("Video") %>">
     <%= render "spina/admin/parts/images/form", f: f %>
+  </section>
+  <section class="content-form-video mt-5<%= " hidden" if content_type.eql?("Image") || content_type.eql?("") %>">
+    <%= render "spina/admin/parts/videos/form", f: f %>
   </section>
 </div>
