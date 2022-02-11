@@ -6,6 +6,10 @@
   background-color: var(--color-primary);
 }
 
+.video--margin-bottom {
+  margin-bottom: 2em;
+}
+
 .video + .video {
   margin-top: 0.5em;
 }
