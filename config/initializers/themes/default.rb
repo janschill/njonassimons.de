@@ -6,7 +6,7 @@
 Spina::Theme.register do |theme|
   # All views are namespaced based on the theme's name
   theme.name = "default"
-  theme.title = "Default theme"
+  theme.title = "Standard-Theme"
 
   # Parts
   # Define all editable parts you want to use in your view templates
@@ -21,10 +21,14 @@ Spina::Theme.register do |theme|
   # - Option
   # - Repeater
   theme.parts = [
+    {name: "thumbnail", title: "Vorschaubild", part_type: "Spina::Parts::Image"},
+    {name: "subtitle", title: "Untertitel", part_type: "Spina::Parts::Line"},
+    {name: "text", title: "Text", part_type: "Spina::Parts::Text"},
     {name: "content", title: "Inhalt", part_type: "Spina::Parts::Content"},
+    {name: "image", title: "Bild", part_type: "Spina::Parts::Image"},
     {
       name: "images",
-      title: "Images",
+      title: "Bilder",
       part_type: "Spina::Parts::ImageCollection"
     },
     {name: "video", title: "Video", part_type: "Spina::Parts::Video"},
@@ -67,7 +71,7 @@ Spina::Theme.register do |theme|
   # If your project has multiple navigations, it can be useful to configure multiple
   # navigations.
   theme.navigations = [
-    {name: "main", label: "Main navigation"}
+    {name: "main", label: "Haupt-Navigation"}
   ]
 
   # Layout parts (optional)
@@ -79,8 +83,8 @@ Spina::Theme.register do |theme|
   # Think of resources as a collection of pages. They are managed separately in Spina
   # allowing you to separate these pages from the 'main' collection of pages.
   theme.resources = [
-    {name: "projects", label: "Projects", view_template: "project"},
-    {name: "blog_posts", label: "Blog Posts", view_template: "blog_posts"}
+    {name: "projects", label: "Projekte", view_template: "project"},
+    {name: "blog_posts", label: "Blogeinträge", view_template: "blog_posts"}
   ]
 
   # Plugins (optional)

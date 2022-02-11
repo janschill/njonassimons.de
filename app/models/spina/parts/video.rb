@@ -5,9 +5,5 @@ module Spina
       attr_json :video_url, :string, default: ""
       attr_json :video_platform_option, :string, default: ""
     end
-
-    def content
-      Video.find(video_id)
-    end
   end
 end
