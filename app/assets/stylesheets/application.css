@@ -74,7 +74,6 @@ body {
   width: 95%;
   max-width: var(--breakpoint-xl);
   margin: 0 auto;
-  /* animation: fadein 1s var(--cubic-bezier); */
 }
 
 @keyframes drawLineHorizontally {
@@ -96,10 +95,3 @@ body {
   35% { opacity: 0; }
   100%   { opacity: 1; }
 }
-
-/* $breakpoints: (
-'xl': (min-width: $breakpoint-xl),
-'l': (min-width: $breakpoint-l),
-'m': (min-width: $breakpoint-m),
-'s': (min-width: $breakpoint-s)
-); */
