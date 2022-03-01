@@ -14,7 +14,7 @@ gem "redis", "~> 4.0"
 gem "spina", "~> 2.8"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", require: false
-gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.12"
 gem "sentry-ruby", "~> 5.0"
 gem "sentry-rails", "~> 5.0"
 gem "pg", "~> 1.1"
