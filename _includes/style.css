@@ -51,18 +51,18 @@ table { border-collapse: collapse; border-spacing: 0; }
   font-family: "GT America";
   font-display: swap;
   font-weight: 700;
-  src: url("/assets/fonts/GT-America-Expanded-Regular.woff2") format("woff2"),
-       url("/assets/fonts/GT-America-Expanded-Regular.woff") format("woff"),
-       url("/assets/fonts/GT-America-Expanded-Regular.ttf") format("truetype");
+  src: url("{{ '/assets/fonts/GT-America-Expanded-Regular.woff2' | relative_url }}") format("woff2"),
+       url("{{ '/assets/fonts/GT-America-Expanded-Regular.woff' | relative_url }}") format("woff"),
+       url("{{ '/assets/fonts/GT-America-Expanded-Regular.ttf' | relative_url }}") format("truetype");
 }
 
 @font-face {
   font-family: "GT America";
   font-display: swap;
   font-weight: 800;
-  src: url("/assets/fonts/GT-America-Expanded-Medium.woff2") format("woff2"),
-       url("/assets/fonts/GT-America-Expanded-Medium.woff") format("woff"),
-       url("/assets/fonts/GT-America-Expanded-Medium.ttf") format("truetype");
+  src: url("{{ '/assets/fonts/GT-America-Expanded-Medium.woff2' | relative_url }}") format("woff2"),
+       url("{{ '/assets/fonts/GT-America-Expanded-Medium.woff' | relative_url }}") format("woff"),
+       url("{{ '/assets/fonts/GT-America-Expanded-Medium.ttf' | relative_url }}") format("truetype");
 }
 
 html {
