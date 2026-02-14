@@ -20,32 +20,16 @@ collections:
       - { label: "Untertitel", name: "subtitle", widget: "string", required: false }
       - { label: "Vorschaubild", name: "thumbnail", widget: "image" }
       - { label: "Reihenfolge", name: "order", widget: "number", default: 0 }
-      - {
-          label: "Medien",
-          name: "media",
-          widget: "list",
-          required: false,
-          fields:
-            - { label: "Typ", name: "type", widget: "select", options: ["image", "video"] }
-            - { label: "Bild", name: "src", widget: "image", required: false }
-            - { label: "Alt-Text", name: "alt", widget: "string", required: false }
-            - { label: "Plattform", name: "platform", widget: "select", options: ["youtube", "vimeo"], required: false }
-            - { label: "Video-ID", name: "id", widget: "string", required: false }
-        }
-      - { label: "Text", name: "body", widget: "markdown" }
-
-  - name: "posts"
-    label: "Blogeinträge"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
-      - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Datum", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Bild", name: "image", widget: "image", required: false }
-      - { label: "Video-Plattform", name: "video_platform", widget: "select", options: ["youtube", "vimeo"], required: false }
-      - { label: "Video-ID", name: "video_id", widget: "string", required: false }
+      - label: "Medien"
+        name: "media"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Typ", name: "type", widget: "select", options: ["image", "video"] }
+          - { label: "Bild", name: "src", widget: "image", required: false }
+          - { label: "Alt-Text", name: "alt", widget: "string", required: false }
+          - { label: "Plattform", name: "platform", widget: "select", options: ["youtube", "vimeo"], required: false }
+          - { label: "Video-ID", name: "id", widget: "string", required: false }
       - { label: "Text", name: "body", widget: "markdown" }
 
   - name: "pages"
