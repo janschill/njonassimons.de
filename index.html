@@ -7,9 +7,9 @@ title: Niels-Jonas Simons
 <ul class="card-container">
   {% for project in projects %}
   <li class="card card--fade">
-    <a class="card__link" href="{{ project.url }}">
+    <a class="card__link" href="{{ project.url | relative_url }}">
       <figure class="card__figure">
-        <img class="card__image" src="{{ project.thumbnail }}" alt="{{ project.title }}" loading="lazy">
+        <img class="card__image" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" loading="lazy">
         <figcaption class="card__figcaption">
           <h3 class="card__title">{{ project.title }}</h3>
           {% if project.subtitle %}

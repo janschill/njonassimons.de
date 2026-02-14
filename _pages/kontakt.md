@@ -6,7 +6,7 @@ image: /assets/images/kontakt.jpg
 ---
 
 <section class="article__section article__section--left">
-  <img class="image" src="/assets/images/niels-jonas-simons.jpeg" alt="Niels-Jonas Simons" loading="lazy">
+  <img class="image" src="{{ '/assets/images/niels-jonas-simons.jpeg' | relative_url }}" alt="Niels-Jonas Simons" loading="lazy">
 </section>
 <section class="richtext">
   <p>Niels-Jonas Simons<br>DOP & Video-Editor</p>

@@ -7,7 +7,7 @@ layout: default
       {% if media.type == "video" %}
         {% include video.html platform=media.platform id=media.id %}
       {% elsif media.type == "image" %}
-        <img class="image image--margin-bottom" src="{{ media.src }}" alt="{{ media.alt | default: page.title }}" loading="lazy">
+        <img class="image image--margin-bottom" src="{{ media.src | relative_url }}" alt="{{ media.alt | default: page.title }}" loading="lazy">
       {% endif %}
     {% endfor %}
   </section>
