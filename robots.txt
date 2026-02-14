@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://njonas.de/sitemap.xml

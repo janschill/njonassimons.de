@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'de-DE' }}">
+  <head>
+    <title>{{ page.title | default: site.title }}</title>
+    {% include head.html %}
+    {% if jekyll.environment == "production" %}
+    <script async defer data-domain="njonas.de" src="https://nsa.janschill.de/js/plausible.js"></script>
+    {% endif %}
+    <style>{% include style.css %}</style>
+  </head>
+  <body>
+    {% include header.html %}
+    {{ content }}
+  </body>
+</html>

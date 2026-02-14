@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="post">
+  <section class="post__image">
+    {% if page.image %}
+      <img class="image" src="{{ page.image }}" alt="{{ page.title }}" loading="lazy">
+    {% elsif page.video_platform and page.video_id %}
+      {% include video.html platform=page.video_platform id=page.video_id %}
+    {% endif %}
+  </section>
+  <section class="richtext">
+    {{ content }}
+  </section>
+</article>

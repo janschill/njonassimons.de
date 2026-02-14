@@ -1,0 +1,449 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Variables & Fonts */
+:root {
+  --color-bright: #ffffff;
+  --color-dark: #000000;
+  --color-primary: #999999;
+  --color-secondary: #3a3a3a;
+  --breakpoint-s: 400px;
+  --breakpoint-m: 750px;
+  --breakpoint-l: 1000px;
+  --breakpoint-xl: 1271px;
+  --font-size-small: 0.85rem;
+  --font-size-medium: 1.125rem;
+  --font-size-large: 1.85rem;
+  --cubic-bezier: cubic-bezier(0.2, 0.3, 0.3, 0.8);
+  --cubic-bezier-card: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@font-face {
+  font-family: "GT America";
+  font-display: swap;
+  font-weight: 700;
+  src: url("/assets/fonts/GT-America-Expanded-Regular.woff2") format("woff2"),
+       url("/assets/fonts/GT-America-Expanded-Regular.woff") format("woff"),
+       url("/assets/fonts/GT-America-Expanded-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GT America";
+  font-display: swap;
+  font-weight: 800;
+  src: url("/assets/fonts/GT-America-Expanded-Medium.woff2") format("woff2"),
+       url("/assets/fonts/GT-America-Expanded-Medium.woff") format("woff"),
+       url("/assets/fonts/GT-America-Expanded-Medium.ttf") format("truetype");
+}
+
+html {
+  font-size: 16px;
+  font-family: "GT America", sans-serif;
+}
+
+body {
+  width: 95%;
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes drawLineHorizontally {
+  0% { width: 0; }
+  50% { width: 0; }
+  100% { width: 30px; }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  35% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-dark);
+  padding: 2em 1em;
+}
+
+@media all and (min-width: 750px) {
+  .header {
+    margin-bottom: 2em;
+    padding: 1.6em 0;
+  }
+}
+
+/* Logo */
+.logo {
+  font-size: var(--font-size-medium);
+  font-weight: 800;
+  animation: fadein 2s var(--cubic-bezier);
+}
+
+.logo__link {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+/* Hamburger */
+.hamburger {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 25px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media all and (min-width: 750px) {
+  .hamburger { display: none; }
+}
+
+.hamburger__inner {
+  top: 50%;
+  transform: translateY(calc(-50% - 4px));
+  transition: transform 300ms var(--cubic-bezier);
+  animation: drawLineHorizontally 700ms var(--cubic-bezier);
+}
+
+.hamburger__inner,
+.hamburger__inner::before {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 1px;
+  background-color: var(--color-secondary);
+}
+
+.hamburger__inner::before {
+  content: '';
+  top: 8px;
+  animation: drawLineHorizontally 500ms var(--cubic-bezier);
+}
+
+.hamburger--activated .hamburger__inner {
+  transform: rotate(90deg);
+}
+
+/* Navigation */
+.navigation {
+  font-size: var(--font-size-medium);
+  display: none;
+}
+
+@media all and (max-width: 750px) {
+  .navigation--visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    z-index: 1;
+    display: block;
+    padding: 0 2em 4em 0;
+  }
+
+  .navigation--visible .navigation__list {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 2em 4em 0;
+  }
+
+  .navigation--visible .navigation__list-item {
+    padding: 2em;
+  }
+}
+
+@media all and (min-width: 750px) {
+  .navigation {
+    display: block;
+  }
+
+  .navigation__list {
+    display: flex;
+  }
+
+  .navigation__list-item {
+    display: flex;
+    margin: 0 2em;
+  }
+}
+
+/* Link */
+.link {
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  white-space: nowrap;
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.navigation--visible .link {
+  font-size: 2rem;
+}
+
+@media all and (min-width: 750px) {
+  .navigation--visible .link { font-size: 1rem; }
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+  transform-origin: 50% 100%;
+  transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+  clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+}
+
+.link:hover::before {
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 1, 1);
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+}
+
+.link span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.link:hover span {
+  transform: translate3d(0, -2px, 0);
+}
+
+.link--navigation {
+  color: var(--color-primary);
+  font-size: var(--font-size-small);
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: start;
+  list-style-type: none;
+}
+
+@media all and (min-width: 750px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+  }
+}
+
+@media all and (min-width: 1271px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Card */
+.card {
+  width: 100%;
+  position: relative;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__figure {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__image {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms var(--cubic-bezier), visibility 500ms var(--cubic-bezier);
+  text-align: center;
+}
+
+.card:hover .card__figcaption {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card__title {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms var(--cubic-bezier);
+  margin-top: -15px;
+  font-size: 1.35rem;
+  padding-top: 25px;
+}
+
+.card__category {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms var(--cubic-bezier);
+  font-size: 0.85rem;
+  padding-top: 50px;
+}
+
+.card__figure:hover .card__title,
+.card__figure:hover .card__category {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Article */
+.article {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media all and (min-width: 750px) {
+  .article {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+  }
+}
+
+/* Post */
+.post {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.post__image {
+  margin-bottom: 2em;
+}
+
+@media all and (min-width: 750px) {
+  .post {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    margin-top: 7em;
+  }
+
+  .post__image {
+    padding: 7em 9em;
+  }
+}
+
+/* Image */
+.image {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: cover;
+}
+
+.image--margin-bottom {
+  margin-bottom: 2em;
+}
+
+/* Video */
+.video {
+  position: relative;
+  padding-top: 56.25%;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: var(--color-primary);
+}
+
+.video--margin-bottom {
+  margin-bottom: 2em;
+}
+
+.video + .video {
+  margin-top: 0.5em;
+}
+
+.video__player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Rich Text */
+.richtext {
+  font-size: var(--font-size-medium);
+  line-height: 1.25;
+}
+
+.richtext h1 {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.richtext h2 {
+  font-weight: bold;
+  margin-bottom: 0.75em;
+}
+
+.richtext p {
+  margin-bottom: 1em;
+}
+
+.richtext strong {
+  font-weight: 800;
+}
+
+.richtext a {
+  color: var(--color-dark);
+}
+
+.richtext em {
+  font-style: italic;
+}

@@ -1,0 +1,43 @@
+title: Niels-Jonas Simons
+description: "Ich bin Niels-Jonas. Ich bin Kameramann, Video-Editor und Multimedia Designer in Köln."
+url: "https://njonas.de"
+lang: de-DE
+author: Niels-Jonas Simons
+
+permalink: /:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "_pages"
+    values:
+      layout: "page"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - mise.toml
+
+highlighter: none
