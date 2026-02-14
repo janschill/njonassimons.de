@@ -400,6 +400,11 @@ body {
   background-color: var(--color-primary);
 }
 
+.video--vertical {
+  padding-top: 177.78%;
+  max-width: 400px;
+}
+
 .video--margin-bottom {
   margin-bottom: 2em;
 }
