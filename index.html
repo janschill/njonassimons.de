@@ -1,0 +1,26 @@
+---
+layout: default
+title: Niels-Jonas Simons
+---
+{% assign projects = site.projects | sort: "order" %}
+{% if projects.size > 0 %}
+<ul class="card-container">
+  {% for project in projects %}
+  <li class="card card--fade">
+    <a class="card__link" href="{{ project.url }}">
+      <figure class="card__figure">
+        <img class="card__image" src="{{ project.thumbnail }}" alt="{{ project.title }}" loading="lazy">
+        <figcaption class="card__figcaption">
+          <h3 class="card__title">{{ project.title }}</h3>
+          {% if project.subtitle %}
+          <p class="card__category">{{ project.subtitle }}</p>
+          {% endif %}
+        </figcaption>
+      </figure>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div>Keine Projekte</div>
+{% endif %}

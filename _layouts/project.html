@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="article">
+  <section>
+    {% for media in page.media %}
+      {% if media.type == "video" %}
+        {% include video.html platform=media.platform id=media.id %}
+      {% elsif media.type == "image" %}
+        <img class="image image--margin-bottom" src="{{ media.src }}" alt="{{ media.alt | default: page.title }}" loading="lazy">
+      {% endif %}
+    {% endfor %}
+  </section>
+  <section class="richtext">
+    {{ content }}
+  </section>
+</article>
