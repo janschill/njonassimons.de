@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:njonas.de)"
+      "WebFetch(domain:njonas.de)",
+      "Bash(grep:*)"
     ]
   }
 }
