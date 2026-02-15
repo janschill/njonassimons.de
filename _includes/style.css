@@ -355,6 +355,12 @@ body {
   .article {
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 50px;
+    align-items: start;
+  }
+
+  .article .richtext {
+    position: sticky;
+    top: 2em;
   }
 }
 

@@ -47,9 +47,4 @@ collections:
           - { label: "Titel", name: "title", widget: "hidden", default: "Kontakt" }
           - { label: "Permalink", name: "permalink", widget: "hidden", default: "/kontakt/" }
           - { label: "Foto", name: "photo", widget: "image" }
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Rolle", name: "role", widget: "string" }
-          - { label: "Straße", name: "street", widget: "string" }
-          - { label: "Stadt", name: "city", widget: "string" }
-          - { label: "E-Mail", name: "email", widget: "string" }
-          - { label: "Zusätzlicher Text", name: "body", widget: "markdown", required: false }
+          - { label: "Text", name: "body", widget: "markdown" }
