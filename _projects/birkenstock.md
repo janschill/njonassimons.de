@@ -4,6 +4,7 @@ title: BIRKENSTOCK
 subtitle: SOCIAL VIDEO ADS
 thumbnail: /assets/images/website-23-14.jpg
 order: 6
+published: true
 media:
   - type: image
     src: /assets/images/birkenstock01.jpg
