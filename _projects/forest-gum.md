@@ -7,10 +7,11 @@ order: 3
 media:
   - type: video
     platform: youtube
-    id: "fUXXumqNVwg"
+    id: fUXXumqNVwg
+    format: vertical
   - type: video
     platform: youtube
-    id: "UoeHPmtiT7o"
+    id: UoeHPmtiT7o
   - type: image
     src: /assets/images/2022_FOREST-GUM_16x9.00_00_08_20.Standbild002.jpg
     alt: Forest Gum
