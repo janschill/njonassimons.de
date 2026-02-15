@@ -1,3 +1,5 @@
+locale: de
+
 backend:
   name: github
   repo: janschill/njonassimons.de
