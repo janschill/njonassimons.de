@@ -3,7 +3,7 @@ layout: project
 title: BIRKENSTOCK
 subtitle: SOCIAL VIDEO ADS
 thumbnail: /assets/images/website-23-14.jpg
-order: 6
+order: 60
 published: true
 media:
   - type: image

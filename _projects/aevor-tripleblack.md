@@ -2,7 +2,7 @@
 layout: project
 title: AEVOR TRIPLEBLACK
 thumbnail: /assets/images/aevor-16x9.jpg
-order: 13
+order: 130
 published: true
 media:
   - type: video

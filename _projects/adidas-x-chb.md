@@ -3,7 +3,7 @@ layout: project
 title: Adidas x CHB
 subtitle: Sin & Spin
 thumbnail: /assets/images/prv_adidaschb.png
-order: 17
+order: 170
 published: true
 media:
   - type: video

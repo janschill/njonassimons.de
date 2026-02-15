@@ -3,7 +3,7 @@ layout: project
 title: ZDF MAGAZIN
 subtitle: MAKING A MUSICAL
 thumbnail: /assets/images/website-23-5.jpg
-order: 20
+order: 200
 published: true
 media:
   - type: video

@@ -3,7 +3,7 @@ layout: project
 title: OK KID
 subtitle: DINNER FOR ONE
 thumbnail: /assets/images/okkid-dinner02.png
-order: 8
+order: 80
 published: true
 media:
   - type: video

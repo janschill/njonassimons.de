@@ -3,7 +3,7 @@ layout: project
 title: DORNBRACHT
 subtitle: TRANSFORMATIVE SPACES
 thumbnail: /assets/images/prv_240408_DORNBRACHT_CUTDOWN_MATIERAL_V03__COLOR_ProRes422HQ.mov.00_00_12_23.Standbild004.png
-order: 4
+order: 40
 published: true
 media:
   - type: video

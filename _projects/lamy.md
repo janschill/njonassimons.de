@@ -3,7 +3,7 @@ layout: project
 title: LAMY
 subtitle: safari note+
 thumbnail: /assets/images/prv_240426_LAMY_ProRes422_00114982_V1-0017.00_10_27_06.Standbild007.png
-order: 1
+order: 10
 published: true
 media:
   - type: image

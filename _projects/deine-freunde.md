@@ -3,7 +3,7 @@ layout: project
 title: DEINE FREUNDE
 subtitle: DIE KRASSESTEN SCHLITTEN
 thumbnail: /assets/images/deine-freunde-03.jpg
-order: 15
+order: 150
 media:
   - type: video
     platform: youtube

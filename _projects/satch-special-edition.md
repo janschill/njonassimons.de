@@ -2,7 +2,7 @@
 layout: project
 title: SATCH SPECIAL EDITION
 thumbnail: /assets/images/placeholder.jpg
-order: 22
+order: 230
 published: false
 media:
   - type: video

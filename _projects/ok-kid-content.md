@@ -2,7 +2,7 @@
 layout: project
 title: OK KID CONTENT
 thumbnail: /assets/images/placeholder.jpg
-order: 29
+order: 300
 published: false
 media:
   - type: video

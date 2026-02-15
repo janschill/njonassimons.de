@@ -2,7 +2,7 @@
 layout: project
 title: AEVOR PROOF
 thumbnail: /assets/images/placeholder.jpg
-order: 24
+order: 250
 published: false
 media:
   - type: video

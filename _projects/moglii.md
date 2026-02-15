@@ -2,7 +2,7 @@
 layout: project
 title: MOGLII
 thumbnail: /assets/images/placeholder.jpg
-order: 25
+order: 260
 published: false
 media:
   - type: video

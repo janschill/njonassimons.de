@@ -2,7 +2,7 @@
 layout: project
 title: COLOGNE MUSIC WEEK
 thumbnail: /assets/images/placeholder.jpg
-order: 26
+order: 270
 published: false
 media:
   - type: video

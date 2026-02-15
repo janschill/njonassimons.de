@@ -3,7 +3,7 @@ layout: project
 title: M.BYRD
 subtitle: THE SEED LYRIC VIDEO
 thumbnail: /assets/images/mbyrdseed-website.jpeg
-order: 10
+order: 100
 media:
   - type: video
     platform: youtube

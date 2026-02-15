@@ -3,7 +3,7 @@ layout: project
 title: FRUCHTGUMMI
 subtitle: FOREST GUM
 thumbnail: /assets/images/prv_gummies3.png
-order: 16
+order: 160
 published: true
 media:
   - type: video

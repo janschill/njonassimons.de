@@ -3,7 +3,7 @@ layout: project
 title: SATCH 2023
 subtitle: BACK TO SCHOOL 23
 thumbnail: /assets/images/prv_vlcsnap-2024-01-31-13h02m53s570.png
-order: 7
+order: 70
 published: true
 media:
   - type: video

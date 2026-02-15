@@ -15,14 +15,16 @@ collections:
     folder: "_projects"
     create: true
     slug: "{{slug}}"
-    sortable_fields: ["order", "title"]
-    ordered: "order"
+    sortable_fields:
+      default:
+        field: order
+      fields: ["order", "title"]
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "project" }
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Untertitel", name: "subtitle", widget: "string", required: false }
       - { label: "Vorschaubild", name: "thumbnail", widget: "image" }
-      - { label: "Reihenfolge", name: "order", widget: "hidden", default: 0 }
+      - { label: "Reihenfolge", name: "order", widget: "number", default: 0 }
       - { label: "Veröffentlicht", name: "published", widget: "boolean", default: true }
       - label: "Medien"
         name: "media"
