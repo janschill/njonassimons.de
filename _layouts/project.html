@@ -7,11 +7,8 @@ layout: default
       {% if media.type == "video" %}
         {% include video.html platform=media.platform id=media.id format=media.format %}
       {% elsif media.type == "image" %}
-        {% assign webp_path = media.src | split: '.' | first | append: '.webp' | replace: '/assets/images/', '/assets/webp/' %}
-        <picture>
-          <source srcset="{{ webp_path | relative_url }}" type="image/webp">
-          <img class="image image--margin-bottom" src="{{ media.src | relative_url }}" alt="{{ media.alt | default: page.title }}" loading="lazy" decoding="async">
-        </picture>
+        {% assign webp_path = media.src | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' | replace: '/assets/images/', '/assets/webp/' %}
+        <img class="image image--margin-bottom" src="{{ webp_path | relative_url }}" alt="{{ media.alt | default: page.title }}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='{{ media.src | relative_url }}'">
       {% endif %}
     {% endfor %}
   </section>
