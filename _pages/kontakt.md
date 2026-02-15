@@ -10,9 +10,3 @@ title: Kontakt
 image: /assets/images/niels-jonas-simons.jpeg
 email: info@njonas.de
 ---
-DOP & Video-Editor
-
-Lichtstr. 28
-50825 Köln
-
-**[info@njonas.de](mailto:info@njonas.de)**
