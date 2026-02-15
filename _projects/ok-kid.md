@@ -4,10 +4,11 @@ title: OK KID
 subtitle: DINNER FOR ONE
 thumbnail: /assets/images/okkid-dinner02.png
 order: 8
+published: true
 media:
   - type: video
     platform: youtube
-    id: "oiR0IyGQRB4"
+    id: oiR0IyGQRB4
   - type: image
     src: /assets/images/okkid-cover-web.jpg
     alt: OK KID Dinner for One
