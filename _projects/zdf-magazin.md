@@ -4,10 +4,11 @@ title: ZDF MAGAZIN
 subtitle: MAKING A MUSICAL
 thumbnail: /assets/images/website-23-5.jpg
 order: 20
+published: true
 media:
   - type: video
     platform: youtube
-    id: "SF0UdzdmktM"
+    id: SF0UdzdmktM
   - type: image
     src: /assets/images/makingamusical.png
     alt: ZDF Magazin Making a Musical
