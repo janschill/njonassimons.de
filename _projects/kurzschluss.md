@@ -4,6 +4,7 @@ title: KURZSCHLUSS
 subtitle: KEY VISUAL
 thumbnail: /assets/images/prv_2023_KURZSCHLUSS_084-DSC06663_lowres_njs.png
 order: 19
+published: true
 media:
   - type: image
     src: /assets/images/prv_2023_KURZSCHLUSS_084-DSC06663_lowres_njs.png
