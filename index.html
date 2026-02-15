@@ -9,7 +9,11 @@ title: Niels-Jonas Simons
   <li class="card card--fade">
     <a class="card__link" href="{{ project.url | relative_url }}">
       <figure class="card__figure">
-        <img class="card__image" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" loading="lazy">
+        {% assign thumb_path = project.thumbnail | split: '.' | first | append: '.webp' | replace: '/assets/images/', '/assets/webp/thumbs/' %}
+        <picture>
+          <source srcset="{{ thumb_path | relative_url }}" type="image/webp">
+          <img class="card__image" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" loading="lazy" decoding="async">
+        </picture>
         <figcaption class="card__figcaption">
           <h3 class="card__title">{{ project.title }}</h3>
           {% if project.subtitle %}
