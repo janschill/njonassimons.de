@@ -13,6 +13,7 @@ collections:
     folder: "_projects"
     create: true
     slug: "{{slug}}"
+    sortable_fields: ["order", "title"]
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "project" }
       - { label: "Titel", name: "title", widget: "string" }

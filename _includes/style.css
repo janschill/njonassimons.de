@@ -401,8 +401,12 @@ body {
 }
 
 .video--vertical {
-  padding-top: 177.78%;
-  max-width: 400px;
+  padding-top: 0;
+  aspect-ratio: 9 / 16;
+  max-height: 80vh;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .video--margin-bottom {
