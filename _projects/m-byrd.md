@@ -4,10 +4,11 @@ title: M. BYRD
 subtitle: FLOOD
 thumbnail: /assets/images/website-23-6.jpg
 order: 9
+published: true
 media:
   - type: video
     platform: youtube
-    id: "y-dYLa1Cvtk"
+    id: y-dYLa1Cvtk
 ---
 
 DoP & Edit: Niels-Jonas Simons
