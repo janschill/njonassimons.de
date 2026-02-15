@@ -3,13 +3,16 @@ layout: project
 title: AEVOR TRIPLEBLACK
 thumbnail: /assets/images/aevor-16x9.jpg
 order: 13
+published: true
 media:
   - type: video
     platform: youtube
-    id: "HRxhmZ00IqY"
+    id: HRxhmZ00IqY
+    format: vertical
   - type: video
     platform: youtube
-    id: "ueQ79sKT4yg"
+    id: ueQ79sKT4yg
+    format: vertical
   - type: image
     src: /assets/images/aevor.png
     alt: AEVOR Tripleblack
