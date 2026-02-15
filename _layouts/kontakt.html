@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="article">
+  <section class="article__section article__section--left">
+    {% if page.photo %}
+    <img class="image" src="{{ page.photo | relative_url }}" alt="{{ page.title }}" loading="lazy">
+    {% endif %}
+  </section>
+  <section class="richtext">
+    <p>{{ page.name }}<br>{{ page.role }}</p>
+    <p>{{ page.street }}<br>{{ page.city }}</p>
+    <p><a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
+    {{ content }}
+  </section>
+</article>

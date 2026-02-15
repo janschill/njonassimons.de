@@ -34,11 +34,18 @@ collections:
 
   - name: "pages"
     label: "Seiten"
-    folder: "_pages"
-    create: true
-    fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-      - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Bild", name: "image", widget: "image", required: false }
-      - { label: "Text", name: "body", widget: "markdown" }
+    files:
+      - name: "kontakt"
+        label: "Kontakt"
+        file: "_pages/kontakt.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "kontakt" }
+          - { label: "Titel", name: "title", widget: "hidden", default: "Kontakt" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/kontakt/" }
+          - { label: "Foto", name: "photo", widget: "image" }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Rolle", name: "role", widget: "string" }
+          - { label: "Straße", name: "street", widget: "string" }
+          - { label: "Stadt", name: "city", widget: "string" }
+          - { label: "E-Mail", name: "email", widget: "string" }
+          - { label: "Zusätzlicher Text", name: "body", widget: "markdown", required: false }
