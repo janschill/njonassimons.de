@@ -403,7 +403,7 @@ body {
 .video--vertical {
   padding-top: 0;
   aspect-ratio: 9 / 16;
-  max-height: 80vh;
+  max-height: 60vh;
   width: auto;
   margin-left: auto;
   margin-right: auto;
